@@ -15,8 +15,8 @@ def evaluate_k(number, array):
 # one pass
 def pro_evaluate_k(number, array):
   for index, i in enumerate(array):
-    if index == array.index(number):
-      continue
+    leftover = number - i
+    if leftover in array and array.index(leftover): return True
   return False
 
 
